@@ -1,0 +1,21 @@
+/* src/assets/fonts/fonts.css */
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('/src/assets/fonts/TypeType\ -\ TTLakes-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Lakes black';
+  src: url('/src/assets/fonts/TypeType - TTLakesCompressed-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Lakes bold';
+  src: url('/src/assets/fonts/TypeType - TTLakesCondensed-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Lakes';
+  src: url('/src/assets/fonts/TTLakes-Regular.woff') format('woff');
+}

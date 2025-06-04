@@ -1,0 +1,34 @@
+@use '../assets/fonts/fonts.css';
+
+@use 'variables' as vars;
+
+
+#root, .app, html, body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--theme-bg-base);
+}
+
+
+@media (min-width: 1121px) {
+    html, body {
+        background-color: #F8F8F8;
+    }
+}
+
+button,
+a,
+h1,
+li,
+ol {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  list-style: none;
+}
