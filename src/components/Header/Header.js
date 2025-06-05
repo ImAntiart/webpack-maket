@@ -1,5 +1,3 @@
-/** @format */
-
 import "./Header.scss";
 import burgerIcon from "../../assets/images/burger.png";
 import dividerIcon from "../../assets/images/divider.png";

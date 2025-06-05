@@ -48,26 +48,3 @@ document.addEventListener("DOMContentLoaded", function () {
     hideExtraSlides();
   });
 });
-
-
-  // После того, как main добавлен в DOM — запускаем инициализацию
-  document.addEventListener("DOMContentLoaded", () => {
-    // Инициализация Swiper
-    const swiper = new Swiper(".swiper", {
-      modules: [Navigation, Pagination],
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      loop: false,
-      pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true,
-      },
-    });
-
-    // Инициализация показа/скрытия слайдов
-    initToggleSlides();
-  });
-
-
-  
