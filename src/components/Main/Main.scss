@@ -59,19 +59,25 @@
 .main__catalog-slider {
   position: relative;
   padding: 16px;
-  overflow: hidden
+  overflow: hidden;
+  width: 100vw;
+  flex-shrink: 0;
 }
 
 .swiper {
   position: relative;
+  width: 100vw;
+  flex-shrink: 0;
 }
 
 .swiper-wrapper {
-  display: grid;
+/*   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(240px, 1fr);
-  gap: 16px;
-  scroll-snap-type: x mandatory;
+  gap: 16px; */
+/*   scroll-snap-type: x mandatory; */
+  width: 100%;
+  flex-shrink: 0;
   
 }
 
@@ -83,7 +89,6 @@
   .swiper-wrapper {
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
-    overflow: visible;
     gap: 16px;
   }
 
@@ -141,8 +146,9 @@
 .swiper-slide {
   display: flex;
   transition: all 0.3s ease;
-  scroll-snap-align: start;
+/*   scroll-snap-align: start; */
   width: 240px;
+  flex-shrink: 0;
 }
 
 .swiper-slide.collapsed {

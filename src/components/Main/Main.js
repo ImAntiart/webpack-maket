@@ -10,6 +10,7 @@ import logoViewSonic from "../../assets/images/brandsLogo/logoViewSonic.png";
 import logoBosch from "../../assets/images/brandsLogo/logoBosch.png";
 import logoHp from "../../assets/images/brandsLogo/logoHp.png";
 import logoSony from "../../assets/images/brandsLogo/logoSony.png";
+import deliver from "../../assets/images/deliver.png";
 import decoy from "../../assets/images/decoy.png";
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
@@ -82,6 +83,7 @@ export default function Main() {
           <img src="${go}" alt="Выбор" />
         </button>
 
+
         <div class="services__scroll-fade"></div>
       </div>
 
@@ -145,9 +147,10 @@ export default function Main() {
       <p>Ремонт умных часов</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
-      <img src="${decoy}" alt="Пустышка" />
-    </button>
+    <button">
+  <img src="${go}" alt="Пустышка" style="visibility: hidden;" />
+</button>
+
   </div>
   <div class="swiper-pagination"></div>
 </nav>
@@ -180,7 +183,7 @@ export default function Main() {
         <p class="label label--time">Срок</p>
         <p class="value value--time">30 мин</p>
 
-        <img src="arrow-right.png" alt="Подробнее" class="card-arrow" />
+        <img src="${deliver}" alt="Подробнее" class="card-arrow" />
       </div>
     </div>
 
@@ -195,7 +198,7 @@ export default function Main() {
         <p class="label label--time">Срок</p>
         <p class="value value--time">30–120 мин</p>
 
-        <img src="arrow-right.png" alt="Подробнее" class="card-arrow" />
+        <img src="${deliver}" alt="Подробнее" class="card-arrow" />
       </div>
     </div>
 
@@ -210,7 +213,7 @@ export default function Main() {
 
         <p class="label label--time">Срок</p>
         <p class="value value--time">30 мин</p>
-        <img src="arrow-right.png" alt="Подробнее" class="card-arrow" />
+        <img src="${deliver}" alt="Подробнее" class="card-arrow" />
       </div>
     </div>
 
@@ -225,7 +228,7 @@ export default function Main() {
         <p class="label label--time">Срок</p>
         <p class="value value--time">30 мин</p>
 
-        <img src="arrow-right.png" alt="Подробнее" class="card-arrow" />
+        <img src="${deliver}" alt="Подробнее" class="card-arrow" />
       </div>
     </div>
 
@@ -240,7 +243,7 @@ export default function Main() {
         <p class="label label--time">Срок</p>
         <p class="value value--time">30 мин</p>
 
-        <img src="arrow-right.png" alt="Подробнее" class="card-arrow" />
+        <img src="${deliver}" alt="Подробнее" class="card-arrow" />
       </div>
     </div>
 
@@ -264,6 +267,8 @@ export default function Main() {
       if (window.innerWidth >= 1120) return 8;
       return 6;
     }
+
+    
 
     function hideExtraSlides() {
       const visibleCount = getVisibleCount();
@@ -295,6 +300,7 @@ export default function Main() {
         }
       });
 
+
       toggleButton.textContent = isCollapsed ? "Скрыть" : "Показать всё";
     }
 
@@ -319,9 +325,7 @@ export default function Main() {
       brandsSwiper = new Swiper(brandsSliderEl, {
         modules: [Pagination],
         slidesPerView: "auto",
-        spaceBetween: 0,
-        freeMode: true,
-        centeredSlides: true,
+        spaceBetween: 16,
         pagination: {
           el: ".swiper-pagination",
           type: "bullets",
@@ -337,8 +341,8 @@ export default function Main() {
     if (isMobile && !repairSwiper && repairSliderEl) {
       repairSwiper = new Swiper(repairSliderEl, {
         modules: [Pagination],
-        slidesPerView: "auto",
-        spaceBetween: 0,
+         slidesPerView: "auto",
+        spaceBetween: 16,
         pagination: {
           el: ".swiper-pagination",
           type: "bullets",
@@ -354,8 +358,8 @@ export default function Main() {
     if (isMobile && !priceSwiper && priceSliderEl) {
       priceSwiper = new Swiper(priceSliderEl, {
         modules: [Pagination],
-        slidesPerView: "auto",
-        spaceBetween: 0,
+          slidesPerView: "auto",
+        spaceBetween: 16,
         pagination: {
           el: ".swiper-pagination",
           type: "bullets",
