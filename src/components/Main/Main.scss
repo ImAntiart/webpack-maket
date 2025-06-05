@@ -59,6 +59,7 @@
 .main__catalog-slider {
   position: relative;
   padding: 16px;
+  overflow: hidden
 }
 
 .swiper {
@@ -141,6 +142,7 @@
   display: flex;
   transition: all 0.3s ease;
   scroll-snap-align: start;
+  width: 240px;
 }
 
 .swiper-slide.collapsed {
@@ -209,7 +211,7 @@
   }
 }
 
-.custom-slide {
+.main__catalog-slider__button-custom-slide--repair {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto 1fr;
@@ -225,7 +227,7 @@
   box-sizing: border-box;
 }
 
-.custom-slide p {
+.main__catalog-slider__button-custom-slide--repair p {
     margin: 0;
     grid-column: 1;
     grid-row: 1;
@@ -234,7 +236,7 @@
   }
 
 
-.custom-slide img {
+.main__catalog-slider__button-custom-slide--repair img {
     grid-column: 2;
     grid-row: 2;
     justify-self: end;
@@ -242,7 +244,65 @@
   }
 
 @media (max-width: 767px) {
-  .custom-slide {
-
+  .main__catalog-slider__button-custom-slide--repair {
+    width: 224px;
   }
+}
+
+
+
+.main__service-card {
+  display: grid;
+  gap: 4px 8px;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "label-type value-type"
+    "label-price value-price"
+    "label-time value-time"
+    ". card-arrow";
+
+  .label--type   { grid-area: label-type; }
+  .value--type   { grid-area: value-type; }
+
+  .label--price  { grid-area: label-price; }
+  .value--price  { grid-area: value-price; }
+
+  .label--time   { grid-area: label-time; }
+  .value--time   { grid-area: value-time; }
+
+  .card-arrow    { grid-area: card-arrow; align-self: end; justify-self: end; }
+
+  /* Для десктопа */
+  @media (min-width: 768px) {
+
+    .main__service-card {
+    grid-template-columns: 1fr 1fr 1fr auto;
+    grid-template-areas:
+      "label-type label-price label-time card-arrow"
+      "value-type value-price value-time card-arrow";
+    }
+
+
+    .card-arrow {
+      align-self: center;
+      justify-self: end;
+    }
+  }
+}
+
+
+.label {
+  font-size: 12px;
+  color: #7e7e82;
+  text-transform: uppercase;
+}
+
+.value {
+  font-weight: 500;
+  font-size: 16px;
 }

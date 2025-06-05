@@ -10,6 +10,7 @@ import logoViewSonic from "../../assets/images/brandsLogo/logoViewSonic.png";
 import logoBosch from "../../assets/images/brandsLogo/logoBosch.png";
 import logoHp from "../../assets/images/brandsLogo/logoHp.png";
 import logoSony from "../../assets/images/brandsLogo/logoSony.png";
+import decoy from "../../assets/images/decoy.png";
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -100,49 +101,52 @@ export default function Main() {
     
 <nav id="repairSlider" class="main__catalog-slider swiper">
   <div class="swiper-wrapper">
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт ноутбуков</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт планшетов</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт ПК</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт мониторов</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт телефонов</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт принтеров</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт проекторов</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт Smart TV</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт игровых приставок</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт фотоаппаратов</p>
       <img src="${go}" alt="Выбор" />
     </button>
-    <button class="swiper-slide main__catalog-slider__button custom-slide">
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
       <p>Ремонт умных часов</p>
       <img src="${go}" alt="Выбор" />
+    </button>
+    <button class="swiper-slide main__catalog-slider__button main__catalog-slider__button-custom-slide--repair">
+      <img src="${decoy}" alt="Пустышка" />
     </button>
   </div>
   <div class="swiper-pagination"></div>
@@ -154,6 +158,96 @@ export default function Main() {
         Показать всё
       </button>
     </div>
+
+     <div class="main__header">
+      <h1 class="main__header-h1">Цены на услуги</h1>
+    </div>
+
+
+    
+
+   <nav id="priceSlider" class="main__catalog-slider swiper">
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide">
+      <div class="main__service-card">
+        <p class="label label--type">Ремонтные услуги</p>
+        <p class="value value--type">Диагностика</p>
+
+        <p class="label label--price">Цена</p>
+        <p class="value value--price">Бесплатно</p>
+
+        <p class="label label--time">Срок</p>
+        <p class="value value--time">30 мин</p>
+
+        <img src="arrow-right.png" alt="Подробнее" class="card-arrow" />
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="main__service-card">
+        <p class="label label--type">Ремонтные услуги</p>
+        <p class="value value--type">Замена дисплея</p>
+
+        <p class="label label--price">Цена</p>
+        <p class="value value--price">1000 ₽</p>
+
+        <p class="label label--time">Срок</p>
+        <p class="value value--time">30–120 мин</p>
+
+        <img src="arrow-right.png" alt="Подробнее" class="card-arrow" />
+      </div>
+    </div>
+
+
+        <div class="swiper-slide">
+      <div class="main__service-card">
+        <p class="label label--type">Ремонтные услуги</p>
+        <p class="value value--type">Диагностика</p>
+
+        <p class="label label--price">Цена</p>
+        <p class="value value--price">Бесплатно</p>
+
+        <p class="label label--time">Срок</p>
+        <p class="value value--time">30 мин</p>
+        <img src="arrow-right.png" alt="Подробнее" class="card-arrow" />
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="main__service-card">
+        <p class="label label--type">Ремонтные услуги</p>
+        <p class="value value--type">Диагностика</p>
+
+        <p class="label label--price">Цена</p>
+        <p class="value value--price">Бесплатно</p>
+
+        <p class="label label--time">Срок</p>
+        <p class="value value--time">30 мин</p>
+
+        <img src="arrow-right.png" alt="Подробнее" class="card-arrow" />
+      </div>
+    </div>
+
+        <div class="swiper-slide">
+      <div class="main__service-card">
+        <p class="label label--type">Ремонтные услуги</p>
+        <p class="value value--type">Диагностика</p>
+
+        <p class="label label--price">Цена</p>
+        <p class="value value--price">Бесплатно</p>
+
+        <p class="label label--time">Срок</p>
+        <p class="value value--time">30 мин</p>
+
+        <img src="arrow-right.png" alt="Подробнее" class="card-arrow" />
+      </div>
+    </div>
+
+  </div>
+
+  <div class="swiper-pagination"></div>
+</nav>
 
   `;
 
@@ -213,18 +307,69 @@ export default function Main() {
   }
 
   // === Инициализируем Swiper и toggle для обоих блоков ===
+  let brandsSwiper = null;
+  let repairSwiper = null;
+  let priceSwiper = null;
+
+  function initializeSlider() {
+    const isMobile = window.innerWidth <= 767;
+
+    const brandsSliderEl = document.getElementById("brandsSlider");
+    if (isMobile && !brandsSwiper && brandsSliderEl) {
+      brandsSwiper = new Swiper(brandsSliderEl, {
+        modules: [Pagination],
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        freeMode: true,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+      });
+    } else if (!isMobile && brandsSwiper) {
+      brandsSwiper.destroy(true, true);
+      brandsSwiper = null;
+    }
+
+    const repairSliderEl = document.getElementById("repairSlider");
+    if (isMobile && !repairSwiper && repairSliderEl) {
+      repairSwiper = new Swiper(repairSliderEl, {
+        modules: [Pagination],
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+      });
+    } else if (!isMobile && repairSwiper) {
+      repairSwiper.destroy(true, true);
+      repairSwiper = null;
+    }
+
+    const priceSliderEl = document.getElementById("priceSlider");
+    if (isMobile && !priceSwiper && priceSliderEl) {
+      priceSwiper = new Swiper(priceSliderEl, {
+        modules: [Pagination],
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+      });
+    } else if (!isMobile && priceSwiper) {
+      priceSwiper.destroy(true, true);
+      priceSwiper = null;
+    }
+  }
+
   window.addEventListener("DOMContentLoaded", () => {
-    new Swiper(".swiper", {
-      modules: [Pagination],
-      slidesPerView: "auto",
-/*       centeredSlides: true, */
-      spaceBetween: 0,
-      pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true,
-      },
-    });
+    initializeSlider();
 
     initToggle({
       slideSelector: "#brandsSlider .swiper-slide",
@@ -235,6 +380,10 @@ export default function Main() {
       slideSelector: "#repairSlider .swiper-slide",
       buttonId: "toggleRepairButton",
     });
+  });
+
+  window.addEventListener("resize", () => {
+    initializeSlider();
   });
 
   return main;
