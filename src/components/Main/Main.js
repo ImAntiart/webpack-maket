@@ -216,8 +216,8 @@ export default function Main() {
   window.addEventListener("DOMContentLoaded", () => {
     new Swiper(".swiper", {
       modules: [Pagination],
-      slidesPerView: 1.2,
-      centeredSlides: true,
+      slidesPerView: "auto",
+/*       centeredSlides: true, */
       spaceBetween: 0,
       pagination: {
         el: ".swiper-pagination",
