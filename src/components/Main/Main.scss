@@ -60,23 +60,22 @@
   position: relative;
   padding: 16px;
   overflow: hidden;
-/*   width: 100vw;
+  /*   width: 100vw;
   flex-shrink: 0; */
 }
 
 .swiper {
   position: relative;
-/*   width: 100vw;
+  /*   width: 100vw;
   flex-shrink: 0; */
 }
 
 .swiper-wrapper {
-
-/*   grid-auto-flow: column;
+  /*   grid-auto-flow: column;
   grid-auto-columns: minmax(240px, 1fr);
   gap: 16px; */
-/*   scroll-snap-type: x mandatory; */
-/*   width: 100%; */
+  /*   scroll-snap-type: x mandatory; */
+  /*   width: 100%; */
 }
 
 @media (min-width: 768px) {
@@ -85,7 +84,7 @@
   }
 
   .swiper-wrapper {
-      display: grid;
+    display: grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
@@ -103,7 +102,7 @@
 @media (min-width: 1120px) {
   .swiper-wrapper {
     grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
-/*     grid-template-columns: repeat(4, 1fr); */
+    /*     grid-template-columns: repeat(4, 1fr); */
     gap: 16px;
   }
 }
@@ -145,7 +144,7 @@
 .swiper-slide {
   display: flex;
   transition: all 0.3s ease;
-/*   scroll-snap-align: start; */
+  /*   scroll-snap-align: start; */
   width: 240px;
   flex-shrink: 0;
 }
@@ -200,6 +199,7 @@
   width: 134px;
   height: 24px;
   padding-left: 24px;
+  padding-bottom: 24px;
 }
 
 .main__expand-text__button {
@@ -228,25 +228,24 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -0.2px; 
+  letter-spacing: -0.2px;
   box-sizing: border-box;
 }
 
 .main__catalog-slider__button-custom-slide--repair p {
-    margin: 0;
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: start;
-    align-self: start;
-  }
-
+  margin: 0;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  align-self: start;
+}
 
 .main__catalog-slider__button-custom-slide--repair img {
-    grid-column: 2;
-    grid-row: 2;
-    justify-self: end;
-    align-self: end;
-  }
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
+  align-self: end;
+}
 
 @media (max-width: 767px) {
   .main__catalog-slider__button-custom-slide--repair {
@@ -254,60 +253,128 @@
   }
 }
 
-
-
-.main__service-card {
-  display: grid;
-  gap: 4px 8px;
+.swiper-slide--price {
+  width: 260px;
+  height: 200px;
   padding: 16px;
-  background-color: #fff;
-  border: 1px solid #eaeaea;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.price__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 228px;
+  height: 168px;
+  gap: 16px;
+}
+
+.price__wrapper-item:first-child {
+  width: 228px;
+  height: 56px;
+}
+
+.price__wrapper-item p {
+  margin: 0;
+  font-family: "TT Lakes";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1B1C21;
+}
+
+.price__wrapper-item p:first-child {
+  margin: 0;
+  font-family: "TT Lakes";
+  color: #7E7E82;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+}
+
+.price__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* #priceSlider {
+  display: none;
+}
+
+
+    #priceSlider {
+    display: block;
+  }
+ */
+
+/* @media (max-width: 767px) {
+  #priceSliderMobile {
+    display: none;
+  }
+
+} */
+
+@media (min-width: 767px) {
+  #priceSliderMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  #priceSlider {
+    display: none;
+  }
+}
+
+
+
+
+ .main__price-table {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  font-family: "TT Lakes", sans-serif;
+  background-color: #f8f8f8;
+  padding: 16px;
   border-radius: 8px;
+}
 
-  // Мобильная версия (по умолчанию)
-  grid-template-columns: auto 1fr;
-  grid-template-areas:
-    "label-type value-type"
-    "label-price value-price"
-    "label-time value-time"
-    ". card-arrow";
+.main__price-table-header {
+  font-weight: 500;
+  color: #7e7e82;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+}
 
-  .label--type   { grid-area: label-type; }
-  .value--type   { grid-area: value-type; }
+.main__price-table-cell {
+  font-weight: 400;
+  font-size: 14px;
+  color: #1b1c21;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .label--price  { grid-area: label-price; }
-  .value--price  { grid-area: value-price; }
+.main__price-table-cell--time {
+  position: relative;
+}
 
-  .label--time   { grid-area: label-time; }
-  .value--time   { grid-area: value-time; }
+.main__price-table-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+}
 
-  .card-arrow    {
-    grid-area: card-arrow;
-    align-self: end;
-    justify-self: end;
-  }
-
-  /* === Десктопная версия (начиная с 768px) === */
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr auto;
-    grid-template-areas:
-      "label-type value-type card-arrow"
-      "label-price value-price card-arrow"
-      "label-time value-time card-arrow";
-
-    .card-arrow {
-      align-self: center;
-      justify-self: end;
-    }
-
-    /* Общее выравнивание текста */
-    .label,
-    .value {
-      text-align: left;
-    }
-
-    .card-arrow {
-      height: 20px;
-    }
-  }
+.main__price-table-button img {
+  width: 20px;
+  height: 20px;
 }

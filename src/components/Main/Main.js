@@ -11,7 +11,7 @@ import logoBosch from "../../assets/images/brandsLogo/logoBosch.png";
 import logoHp from "../../assets/images/brandsLogo/logoHp.png";
 import logoSony from "../../assets/images/brandsLogo/logoSony.png";
 import deliver from "../../assets/images/deliver.png";
-import decoy from "../../assets/images/decoy.png";
+/* import decoy from "../../assets/images/decoy.png"; */
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -148,7 +148,6 @@ export default function Main() {
       <img src="${go}" alt="Выбор" />
     </button>
     <button">
-  <img src="${go}" alt="Пустышка" style="visibility: hidden;" />
 </button>
 
   </div>
@@ -166,84 +165,116 @@ export default function Main() {
       <h1 class="main__header-h1">Цены на услуги</h1>
     </div>
 
-
-    
-
-   <nav id="priceSlider" class="main__catalog-slider swiper">
+<nav id="priceSliderMobile" class="main__catalog-slider swiper">
   <div class="swiper-wrapper">
 
-    <div class="swiper-slide">
-      <div class="main__service-card">
-        <p class="label label--type">Ремонтные услуги</p>
-        <p class="value value--type">Диагностика</p>
-
-        <p class="label label--price">Цена</p>
-        <p class="value value--price">Бесплатно</p>
-
-        <p class="label label--time">Срок</p>
-        <p class="value value--time">30 мин</p>
-
-        <img src="${deliver}" alt="Подробнее" class="card-arrow" />
+    <div class="swiper-slide swiper-slide--price">
+      <div class="price__wrapper">
+        <div class="price__wrapper-item">
+          <p>Ремонтные услуги</p>
+          <p>Тестирование с выдачей технического заключения</p>
+        </div>
+        <div class="price__wrapper-item">
+          <p>Цена</p>
+          <p>1 000 ₽</p>
+        </div>
+        <div class="price__footer">
+          <div class="price__wrapper-item">
+            <p>Срок</p>
+            <p>30-120 мин</p>
+          </div>
+          <button>
+            <img src="${deliver}" alt="Подробнее" />
+          </button>
+        </div>
       </div>
     </div>
 
-    <div class="swiper-slide">
-      <div class="main__service-card">
-        <p class="label label--type">Ремонтные услуги</p>
-        <p class="value value--type">Замена дисплея</p>
-
-        <p class="label label--price">Цена</p>
-        <p class="value value--price">1000 ₽</p>
-
-        <p class="label label--time">Срок</p>
-        <p class="value value--time">30–120 мин</p>
-
-        <img src="${deliver}" alt="Подробнее" class="card-arrow" />
+    <div class="swiper-slide swiper-slide--price">
+      <div class="price__wrapper">
+        <div class="price__wrapper-item">
+          <p>Ремонтные услуги</p>
+          <p>Диагностика</p>
+        </div>
+        <div class="price__wrapper-item">
+          <p>Цена</p>
+          <p>Бесплатно</p>
+        </div>
+        <div class="price__footer">
+          <div class="price__wrapper-item">
+            <p>Срок</p>
+            <p>30 мин</p>
+          </div>
+          <button>
+            <img src="${deliver}" alt="Подробнее" />
+          </button>
+        </div>
       </div>
     </div>
 
-
-        <div class="swiper-slide">
-      <div class="main__service-card">
-        <p class="label label--type">Ремонтные услуги</p>
-        <p class="value value--type">Диагностика</p>
-
-        <p class="label label--price">Цена</p>
-        <p class="value value--price">Бесплатно</p>
-
-        <p class="label label--time">Срок</p>
-        <p class="value value--time">30 мин</p>
-        <img src="${deliver}" alt="Подробнее" class="card-arrow" />
+    <div class="swiper-slide swiper-slide--price">
+      <div class="price__wrapper">
+        <div class="price__wrapper-item">
+          <p>Ремонтные услуги</p>
+          <p>Замена дисплея</p>
+        </div>
+        <div class="price__wrapper-item">
+          <p>Цена</p>
+          <p>1 000 ₽</p>
+        </div>
+        <div class="price__footer">
+          <div class="price__wrapper-item">
+            <p>Срок</p>
+            <p>30-120 мин</p>
+          </div>
+          <button>
+            <img src="${deliver}" alt="Подробнее" />
+          </button>
+        </div>
       </div>
     </div>
 
-    <div class="swiper-slide">
-      <div class="main__service-card">
-        <p class="label label--type">Ремонтные услуги</p>
-        <p class="value value--type">Диагностика</p>
-
-        <p class="label label--price">Цена</p>
-        <p class="value value--price">Бесплатно</p>
-
-        <p class="label label--time">Срок</p>
-        <p class="value value--time">30 мин</p>
-
-        <img src="${deliver}" alt="Подробнее" class="card-arrow" />
+        <div class="swiper-slide swiper-slide--price">
+      <div class="price__wrapper">
+        <div class="price__wrapper-item">
+          <p>Ремонтные услуги</p>
+          <p>Тестирование с выдачей технического заключения</p>
+        </div>
+        <div class="price__wrapper-item">
+          <p>Цена</p>
+          <p>1 000 ₽</p>
+        </div>
+        <div class="price__footer">
+          <div class="price__wrapper-item">
+            <p>Срок</p>
+            <p>30-120 мин</p>
+          </div>
+          <button>
+            <img src="${deliver}" alt="Подробнее" />
+          </button>
+        </div>
       </div>
     </div>
 
-        <div class="swiper-slide">
-      <div class="main__service-card">
-        <p class="label label--type">Ремонтные услуги</p>
-        <p class="value value--type">Диагностика</p>
-
-        <p class="label label--price">Цена</p>
-        <p class="value value--price">Бесплатно</p>
-
-        <p class="label label--time">Срок</p>
-        <p class="value value--time">30 мин</p>
-
-        <img src="${deliver}" alt="Подробнее" class="card-arrow" />
+    <div class="swiper-slide swiper-slide--price">
+      <div class="price__wrapper">
+        <div class="price__wrapper-item">
+          <p>Ремонтные услуги</p>
+          <p>Замена программного обеспечения</p>
+        </div>
+        <div class="price__wrapper-item">
+          <p>Цена</p>
+          <p>1 000 ₽</p>
+        </div>
+        <div class="price__footer">
+          <div class="price__wrapper-item">
+            <p>Срок</p>
+            <p>30-120 мин</p>
+          </div>
+          <button>
+            <img src="${deliver}" alt="Подробнее" />
+          </button>
+        </div>
       </div>
     </div>
 
@@ -251,6 +282,65 @@ export default function Main() {
 
   <div class="swiper-pagination"></div>
 </nav>
+
+ <div class="main__price-table" id="priceSlider">
+      <!-- Заголовки -->
+      <div class="main__price-table-header">Ремонтные услуги</div>
+      <div class="main__price-table-header">Цена</div>
+      <div class="main__price-table-header">Срок</div>
+
+      <!-- Строка 1 -->
+      <div class="main__price-table-cell">Диагностика</div>
+      <div class="main__price-table-cell">Бесплатно</div>
+      <div class="main__price-table-cell main__price-table-cell--time">
+        30 мин
+        <button class="main__price-table-button">
+          <img src="${deliver}" alt="Подробнее" />
+        </button>
+      </div>
+
+      <!-- Строка 2 -->
+      <div class="main__price-table-cell">Замена дисплея</div>
+      <div class="main__price-table-cell">1 000 ₽</div>
+      <div class="main__price-table-cell main__price-table-cell--time">
+        30–120 мин
+        <button class="main__price-table-button">
+          <img src="${deliver}" alt="Подробнее" />
+        </button>
+      </div>
+
+      <!-- Строка 3 -->
+      <div class="main__price-table-cell">Замена полифонического динамика</div>
+      <div class="main__price-table-cell">1 000 ₽</div>
+      <div class="main__price-table-cell main__price-table-cell--time">
+        30–120 мин
+        <button class="main__price-table-button">
+          <img src="${deliver}" alt="Подробнее" />
+        </button>
+      </div>
+
+      <!-- Строка 4 -->
+      <div class="main__price-table-cell">
+        Тестирование с выдачей технического заключения
+      </div>
+      <div class="main__price-table-cell">1 000 ₽</div>
+      <div class="main__price-table-cell main__price-table-cell--time">
+        30–120 мин
+        <button class="main__price-table-button">
+          <img src="${deliver}" alt="Подробнее" />
+        </button>
+      </div>
+
+      <!-- Строка 5 -->
+      <div class="main__price-table-cell">Замена программного обеспечения</div>
+      <div class="main__price-table-cell">1 000 ₽</div>
+      <div class="main__price-table-cell main__price-table-cell--time">
+        30–120 мин
+        <button class="main__price-table-button">
+          <img src="${deliver}" alt="Подробнее" />
+        </button>
+      </div>
+    </div>
 
   `;
 
@@ -322,7 +412,7 @@ export default function Main() {
       brandsSwiper = new Swiper(brandsSliderEl, {
         modules: [Pagination],
         slidesPerView: "auto",
-/*         slidesOffsetBefore: 16,
+        /*         slidesOffsetBefore: 16,
         slidesOffsetAfter: 16, */
         centeredSlides: false,
         spaceBetween: 16,
@@ -345,7 +435,7 @@ export default function Main() {
         slidesOffsetBefore: 16,
         slidesOffsetAfter: 16,
         centeredSlides: false,
-                spaceBetween: 16,
+        spaceBetween: 16,
 
         pagination: {
           el: ".swiper-pagination",
@@ -358,7 +448,7 @@ export default function Main() {
       repairSwiper = null;
     }
 
-    const priceSliderEl = document.getElementById("priceSlider");
+const priceSliderEl = document.getElementById("priceSliderMobile");
     if (isMobile && !priceSwiper && priceSliderEl) {
       priceSwiper = new Swiper(priceSliderEl, {
         modules: [Pagination],
