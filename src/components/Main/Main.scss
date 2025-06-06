@@ -323,7 +323,7 @@
   grid-template-columns: 2fr 1fr 1fr 1fr;
   padding: 16px;
   box-sizing: border-box;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   font-family: "TT Lakes";
   font-weight: 500;
   font-size: 14px;
@@ -341,8 +341,8 @@
   padding: 16px;
   box-sizing: border-box;
   background-color: #ffffff;
-  position: relative; /* для позиционирования ::after */
-  font-family: "TT Lakes";
+  position: relative;
+  font-family: "Lakes";
   color: #1b1c21;
   font-weight: 400;
   font-size: 14px;
@@ -353,9 +353,49 @@
 .main__price-table-row::after {
   content: "";
   position: absolute;
-  left: 2%; /* начать с 5% слева, чтобы занять 90% ширины */
+  left: 2%;
   bottom: 0;
   width: 96%;
   height: 1px;
   background-color: #eaeaea;
+}
+
+.main__price-table-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 421px;
+  padding: 16px;
+  font-family: "Lakes";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+
+}
+
+@media (min-width: 768px) {
+  .main__price-table-info{
+    gap: 16px;
+  }
+}
+
+.main__price-table-info--commercial {
+/*   display: flex; */
+  font-family: "TT Lakes";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+  position: relative;
+
+}
+
+.main__price-table-info--commercial img {
+  position: absolute;
+  width: 24;
+  height: 27;
+  bottom: 0;
+
 }

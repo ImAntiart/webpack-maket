@@ -1,6 +1,7 @@
 import '../sass/main.scss';
 import Header from '../components/Header/Header';
 import Main from '../components/Main/Main';
+import Footer from '../components/Footer/Footer';
 
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
 
   app.appendChild(Header());
   app.appendChild(Main()); 
+  app.appendChild(Footer()); 
 
 
   return app;

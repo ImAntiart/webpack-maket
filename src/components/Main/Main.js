@@ -11,6 +11,7 @@ import logoBosch from "../../assets/images/brandsLogo/logoBosch.png";
 import logoHp from "../../assets/images/brandsLogo/logoHp.png";
 import logoSony from "../../assets/images/brandsLogo/logoSony.png";
 import deliver from "../../assets/images/deliver.png";
+import arrow from "../../assets/images/arrow.png"
 /* import decoy from "../../assets/images/decoy.png"; */
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
@@ -340,6 +341,22 @@ export default function Main() {
     </div>
   </div>
 </section>
+
+<div class="main__price-table-info">
+  <p>
+    Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+    услугу. Для получения коммерческого предложения на постоянное обслуживание,
+    оставьте заявку.
+  </p>
+  <div class="main__price-table-info--commercial">
+    <p>
+      Получить коммерческое предложение
+      <button> <img src="${arrow}" alt="Предложение" /> </button>
+    </p>
+  </div>
+</div>
+
+
 
   `;
 
