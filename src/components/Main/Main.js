@@ -268,8 +268,6 @@ export default function Main() {
       return 6;
     }
 
-    
-
     function hideExtraSlides() {
       const visibleCount = getVisibleCount();
 
@@ -300,7 +298,6 @@ export default function Main() {
         }
       });
 
-
       toggleButton.textContent = isCollapsed ? "Скрыть" : "Показать всё";
     }
 
@@ -325,6 +322,9 @@ export default function Main() {
       brandsSwiper = new Swiper(brandsSliderEl, {
         modules: [Pagination],
         slidesPerView: "auto",
+/*         slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16, */
+        centeredSlides: false,
         spaceBetween: 16,
         pagination: {
           el: ".swiper-pagination",
@@ -341,8 +341,12 @@ export default function Main() {
     if (isMobile && !repairSwiper && repairSliderEl) {
       repairSwiper = new Swiper(repairSliderEl, {
         modules: [Pagination],
-         slidesPerView: "auto",
-        spaceBetween: 16,
+        slidesPerView: "auto",
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16,
+        centeredSlides: false,
+                spaceBetween: 16,
+
         pagination: {
           el: ".swiper-pagination",
           type: "bullets",
@@ -358,7 +362,10 @@ export default function Main() {
     if (isMobile && !priceSwiper && priceSliderEl) {
       priceSwiper = new Swiper(priceSliderEl, {
         modules: [Pagination],
-          slidesPerView: "auto",
+        slidesPerView: "auto",
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16,
+        centeredSlides: false,
         spaceBetween: 16,
         pagination: {
           el: ".swiper-pagination",

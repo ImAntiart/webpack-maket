@@ -60,25 +60,23 @@
   position: relative;
   padding: 16px;
   overflow: hidden;
-  width: 100vw;
-  flex-shrink: 0;
+/*   width: 100vw;
+  flex-shrink: 0; */
 }
 
 .swiper {
   position: relative;
-  width: 100vw;
-  flex-shrink: 0;
+/*   width: 100vw;
+  flex-shrink: 0; */
 }
 
 .swiper-wrapper {
-/*   display: grid;
-  grid-auto-flow: column;
+
+/*   grid-auto-flow: column;
   grid-auto-columns: minmax(240px, 1fr);
   gap: 16px; */
 /*   scroll-snap-type: x mandatory; */
-  width: 100%;
-  flex-shrink: 0;
-  
+/*   width: 100%; */
 }
 
 @media (min-width: 768px) {
@@ -87,6 +85,7 @@
   }
 
   .swiper-wrapper {
+      display: grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
@@ -265,6 +264,7 @@
   border: 1px solid #eaeaea;
   border-radius: 8px;
 
+  // Мобильная версия (по умолчанию)
   grid-template-columns: auto 1fr;
   grid-template-areas:
     "label-type value-type"
@@ -281,34 +281,33 @@
   .label--time   { grid-area: label-time; }
   .value--time   { grid-area: value-time; }
 
-  .card-arrow    { grid-area: card-arrow; align-self: end; justify-self: end; }
+  .card-arrow    {
+    grid-area: card-arrow;
+    align-self: end;
+    justify-self: end;
+  }
 
-  /* Для десктопа */
+  /* === Десктопная версия (начиная с 768px) === */
   @media (min-width: 768px) {
-
-    .main__service-card {
-    grid-template-columns: 1fr 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr auto;
     grid-template-areas:
-      "label-type label-price label-time card-arrow"
-      "value-type value-price value-time card-arrow";
-    }
-
+      "label-type value-type card-arrow"
+      "label-price value-price card-arrow"
+      "label-time value-time card-arrow";
 
     .card-arrow {
       align-self: center;
       justify-self: end;
     }
+
+    /* Общее выравнивание текста */
+    .label,
+    .value {
+      text-align: left;
+    }
+
+    .card-arrow {
+      height: 20px;
+    }
   }
-}
-
-
-.label {
-  font-size: 12px;
-  color: #7e7e82;
-  text-transform: uppercase;
-}
-
-.value {
-  font-weight: 500;
-  font-size: 16px;
 }
