@@ -283,64 +283,63 @@ export default function Main() {
   <div class="swiper-pagination"></div>
 </nav>
 
- <div class="main__price-table" id="priceSlider">
-      <!-- Заголовки -->
-      <div class="main__price-table-header">Ремонтные услуги</div>
-      <div class="main__price-table-header">Цена</div>
-      <div class="main__price-table-header">Срок</div>
 
-      <!-- Строка 1 -->
-      <div class="main__price-table-cell">Диагностика</div>
-      <div class="main__price-table-cell">Бесплатно</div>
-      <div class="main__price-table-cell main__price-table-cell--time">
-        30 мин
-        <button class="main__price-table-button">
-          <img src="${deliver}" alt="Подробнее" />
-        </button>
-      </div>
+<section class="main__price-table" id="priceSlider">
+  <!-- Заголовки -->
+  <div class="main__price-table-head">
+    <p>Ремонтные услуги</p>
+    <p>Цена</p>
+    <p>Срок</p>
+  </div>
 
-      <!-- Строка 2 -->
-      <div class="main__price-table-cell">Замена дисплея</div>
-      <div class="main__price-table-cell">1 000 ₽</div>
-      <div class="main__price-table-cell main__price-table-cell--time">
-        30–120 мин
-        <button class="main__price-table-button">
-          <img src="${deliver}" alt="Подробнее" />
-        </button>
-      </div>
-
-      <!-- Строка 3 -->
-      <div class="main__price-table-cell">Замена полифонического динамика</div>
-      <div class="main__price-table-cell">1 000 ₽</div>
-      <div class="main__price-table-cell main__price-table-cell--time">
-        30–120 мин
-        <button class="main__price-table-button">
-          <img src="${deliver}" alt="Подробнее" />
-        </button>
-      </div>
-
-      <!-- Строка 4 -->
-      <div class="main__price-table-cell">
-        Тестирование с выдачей технического заключения
-      </div>
-      <div class="main__price-table-cell">1 000 ₽</div>
-      <div class="main__price-table-cell main__price-table-cell--time">
-        30–120 мин
-        <button class="main__price-table-button">
-          <img src="${deliver}" alt="Подробнее" />
-        </button>
-      </div>
-
-      <!-- Строка 5 -->
-      <div class="main__price-table-cell">Замена программного обеспечения</div>
-      <div class="main__price-table-cell">1 000 ₽</div>
-      <div class="main__price-table-cell main__price-table-cell--time">
-        30–120 мин
-        <button class="main__price-table-button">
-          <img src="${deliver}" alt="Подробнее" />
-        </button>
-      </div>
+  <div class="main__price-table-row--wrappler">
+    <!-- Строка 1 -->
+    <div class="main__price-table-row">
+      <p>Диагностика</p>
+      <p>Бесплатно</p>
+      <p>30 мин</p>
+      <button class="main__price-table-button">
+        <img src="${deliver}" alt="Подробнее" />
+      </button>
     </div>
+
+    <div class="main__price-table-row">
+      <p>Замена дисплея</p>
+      <p>1 000 ₽</p>
+      <p>30 - 120 мин</p>
+      <button class="main__price-table-button">
+        <img src="${deliver}" alt="Подробнее" />
+      </button>
+    </div>
+
+    <div class="main__price-table-row">
+      <p>Замена полифонического динамика</p>
+      <p>1 000 ₽</p>
+      <p>30 - 120 мин</p>
+      <button class="main__price-table-button">
+        <img src="${deliver}" alt="Подробнее" />
+      </button>
+    </div>
+
+    <div class="main__price-table-row">
+      <p>Тестирование с выдачей технического заключения</p>
+      <p>1 000 ₽</p>
+      <p>30 - 120 мин</p>
+      <button class="main__price-table-button">
+        <img src="${deliver}" alt="Подробнее" />
+      </button>
+    </div>
+
+    <div class="main__price-table-row">
+      <p>Замена программного обеспечения</p>
+      <p>1 000 ₽</p>
+      <p>30 - 120 мин</p>
+      <button class="main__price-table-button">
+        <img src="${deliver}" alt="Подробнее" />
+      </button>
+    </div>
+  </div>
+</section>
 
   `;
 
@@ -448,7 +447,7 @@ export default function Main() {
       repairSwiper = null;
     }
 
-const priceSliderEl = document.getElementById("priceSliderMobile");
+    const priceSliderEl = document.getElementById("priceSliderMobile");
     if (isMobile && !priceSwiper && priceSliderEl) {
       priceSwiper = new Swiper(priceSliderEl, {
         modules: [Pagination],
