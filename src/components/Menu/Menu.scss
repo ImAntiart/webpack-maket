@@ -1,18 +1,4 @@
-/* .menu {
-  padding: 0;
-  margin: 0;
-  background-color: #ffffff;
-  width: 320px;
-  height: 1024px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow-y: auto;
-}
- */
-
-
- .menu {
+.menu {
   position: fixed;
   top: 0;
   left: -320px;
@@ -22,23 +8,29 @@
   z-index: 999;
   overflow-y: auto;
   transition: left 0.3s ease-in-out;
-box-shadow: 16px 0px 52px 0px #0E185033; // Затемнение справа
+  box-shadow: 16px 0px 52px 0px #0e185033; // Затемнение справа
 
   &.menu--open {
     left: 0;
   }
 
   @media (min-width: 1440px) {
-    left: 0;
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 320px;
+      height: 100vh;
+      z-index: 999;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .menu {
+      min-height: 1024px;
+    }
   }
 }
-
-@media (min-width: 768px) {
-    .menu {
-    min-height: 1024px;
-    }
-}
-
 
 .menu__nav {
   height: 70px;
@@ -61,13 +53,12 @@ box-shadow: 16px 0px 52px 0px #0E185033; // Затемнение справа
 }
 
 @media (min-width: 768px) {
-    .menu__main {
+  .menu__main {
     justify-content: space-between;
     width: 222px;
     min-height: 876px;
     gap: 0px;
-}
-
+  }
 }
 
 .menu__main__nav {
@@ -111,7 +102,7 @@ box-shadow: 16px 0px 52px 0px #0E185033; // Затемнение справа
 .menu__main__contacts {
   display: flex;
   flex-direction: column;
-/*   height: 244px; */
+  /*   height: 244px; */
 }
 
 .menu__main__contacts__content {
@@ -159,7 +150,6 @@ box-shadow: 16px 0px 52px 0px #0E185033; // Затемнение справа
 .menu__main__contacts__language-button:first-child {
   color: #7e7e82;
 }
-
 
 .menu-overlay {
   position: fixed;

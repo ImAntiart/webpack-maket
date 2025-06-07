@@ -1,5 +1,6 @@
 /** @format */
-
+import Call from '../Call/Call';
+import Feedback from '../Feedback/Feedback';
 import cross from "../../assets/images/cross.png";
 import logoIcon from "../../assets/images/Logo.png";
 import highlight from "../../assets/images/highlight.png";
@@ -91,6 +92,19 @@ export default function Menu() {
 const closeBtn = menu.querySelector(".menu__close-button");
 closeBtn.addEventListener("click", () => {
   menu.classList.remove("menu--open");
+});
+
+const callBtn = menu.querySelector('[aria-label="Позвонить"]');
+const feedbackBtn = menu.querySelector('[aria-label="Написать"]');
+
+callBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // чтобы не закрывалось меню или overlay
+  document.body.appendChild(Call());
+});
+
+feedbackBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  document.body.appendChild(Feedback());
 });
 
   return menu;

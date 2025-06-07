@@ -1,3 +1,63 @@
 <!-- @format -->
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/components/Feedback/Feedback.scss" />
+  </head>
+  <body>
+    <aside class="feedback-popup">
+      <section class="feedback-popup__content">
+        <button class="feedback-popup__close">
+          <img src="${cross}" alt="Закрыть" />
+        </button>
+        <h2>
+          <img src="${highlight}" alt="" />
+          <p>Обратная связь</p>
+        </h2>
+        <form class="feedback-popup__form">
+          <label class="feedback-popup__label">
+            Имя
+            <input type="text" name="name" placeholder="Имя" required />
+          </label>
 
+          <label class="feedback-popup__label">
+            Телефон
+            <input type="tel" name="phone" placeholder="Телефон" required />
+          </label>
+
+          <label class="feedback-popup__label">
+            Электронная почта
+            <input
+              type="email"
+              name="email"
+              placeholder="Электронная почта"
+              required
+            />
+          </label>
+
+          <label class="feedback-popup__label">
+            Сообщение
+            <textarea name="message" placeholder="Сообщение"></textarea>
+          </label>
+        </form>
+      </section>
+      <button type="submit" class="feedback-popup__submit">
+        <img src="${send}" alt="Отправить" />
+      </button>
+    </aside>
+  </body>
+</html>
+
+
+        <button  class="feedback-popup__submit">
+        
+    </button>
+
+
+    <button class="feedback-popup__submit-img" type="submit">
+        <img src="${send}" alt="Отправить" />
+    </button>
