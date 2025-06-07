@@ -87,11 +87,11 @@ export default function Menu() {
     </article>
   `;
 
-  const closeBtn = menu.querySelector(".menu__close-button");
-  closeBtn.addEventListener("click", () => {
-    menu.classList.remove("menu--open");
-    overlay.classList.remove("menu-overlay--visible");
-  });
+
+const closeBtn = menu.querySelector(".menu__close-button");
+closeBtn.addEventListener("click", () => {
+  menu.classList.remove("menu--open");
+});
 
   return menu;
 }

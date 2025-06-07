@@ -24,3 +24,11 @@ background-color: #F8F8F8;
         height: 81px;
     }
 }
+
+@media (min-width: 1121px) {
+        .footer {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 65px;
+    }
+}
