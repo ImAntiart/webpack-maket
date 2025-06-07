@@ -1,4 +1,5 @@
 import "./Header.scss";
+import Menu from "../Menu/Menu";
 import burgerIcon from "../../assets/images/burger.png";
 import dividerIcon from "../../assets/images/divider.png";
 import logoIcon from "../../assets/images/Logo.png";
@@ -134,6 +135,32 @@ export default function Header() {
       </section>
     </div>
   `;
+
+  // Создаём и добавляем меню в DOM
+  const menu = Menu();
+  document.body.appendChild(menu);
+
+    // Создаём overlay
+  const overlay = document.createElement('div');
+  overlay.classList.add('menu-overlay');
+  document.body.appendChild(overlay);
+
+  // Находим кнопку бургера
+  const burgerButton = header.querySelector('.header__button[aria-label="Меню"]');
+
+    // Обработчик открытия/закрытия
+  burgerButton.addEventListener('click', () => {
+    menu.classList.toggle('menu--open');
+    overlay.classList.toggle('menu-overlay--visible');
+  });
+
+    // Закрытие по клику вне меню
+  overlay.addEventListener('click', () => {
+    menu.classList.remove('menu--open');
+    overlay.classList.remove('menu-overlay--visible');
+  });
+
+
 
   return header;
 }

@@ -15,7 +15,7 @@
     border-bottom: 1px solid var(--accent-color-primary);
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
     .header__main-nav {
         width: 100%;
         height: 88px;
@@ -37,7 +37,7 @@
 
 
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
     .header__logo-nav {
         display: flex;
         align-items: center;
@@ -46,7 +46,7 @@
     }
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
     .header__actions {
         width: 332px;
         display: flex;
@@ -62,7 +62,7 @@
 }
 
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
   .header__button--hide-on-low,
 .header__divider--hide-on-low {
     display: inline-block;
@@ -77,7 +77,7 @@
     background-color: var(--theme-bg-secondary);
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
     .header__controls{
     width: 100%;
     height: 416px;
@@ -99,7 +99,7 @@ justify-content: space-evenly;
 height: 152px;
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
     .services  {
     height: 168px;
 
@@ -151,7 +151,7 @@ height: 152px;
     letter-spacing: -0.6px;
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
     .services__header-h1 {
         width: 257px; 
 
@@ -229,7 +229,7 @@ height: 152px;
     overflow: auto;
     }
 
-    @media (min-width: 784px) {
+    @media (min-width: 768px) {
         .services__menu {
             padding-left: 24px;
         }
@@ -266,7 +266,7 @@ height: 152px;
     letter-spacing: -0.2px;
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
     .services__menu-item {
         padding: 2%;
     }
@@ -340,7 +340,7 @@ height: 152px;
   width: 100%;
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
   .about-company {
     flex-direction: row;
     justify-content: space-between;
@@ -359,7 +359,7 @@ br {
   display: contents;
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
   br {
     display: block;
   }
@@ -391,7 +391,7 @@ br {
       padding-left: 16px;
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
   .about-company__info {
     display: flex;
     flex-direction: column;
@@ -413,7 +413,7 @@ br {
 }
 
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
   .about-company__text {
 /*     width: 312px; */
     height: 160px;
@@ -435,7 +435,7 @@ br {
   display: none;
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
   .about-company__text--secondary {
     display: inline-block;
   }
@@ -492,7 +492,7 @@ br {
   object-fit: cover;
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
   .about-company__image {
     width: 360px;
     height: 208px;
