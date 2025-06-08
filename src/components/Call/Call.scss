@@ -46,6 +46,13 @@
   &__close {
     display: flex;
     padding: 24px 0 32px 16px;
+
+        @media (min-width: 1140px)  {
+      position: absolute;
+      padding: 0;
+      top: 32px;
+      right: 332px;
+    }
   }
 
   &__header {
@@ -58,6 +65,10 @@
     line-height: 32px;
     letter-spacing: -0.6px;
     color: var(--text-color-primary);
+
+            @media (min-width: 1140px) {
+          padding-top: 40px;
+        }
   }
 
   &__form {
