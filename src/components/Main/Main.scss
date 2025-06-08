@@ -3,13 +3,13 @@
 }
 
 .main {
-  background-color: #f8f8f8;
+  background-color: var(--theme-bg-secondary);
 }
 
 .main__header {
   display: flex;
-  background-color: #ffffff;
-  border-top: 1px solid #d9fff5;
+  background-color: var(--theme-bg-base);
+  border-top: 1px solid var(--accent-color-secondary);
   padding: 16px;
 }
 
@@ -77,7 +77,6 @@
 @media (min-width: 1120px) {
   .swiper-wrapper {
     grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
-    /*     grid-template-columns: repeat(4, 1fr); */
     gap: 16px;
   }
 }
@@ -88,7 +87,7 @@
   justify-content: space-around;
   width: 240px;
   height: 72px;
-  background-color: #ffffff;
+  background-color: var(--theme-bg-base);
   border: #eaeaea solid 1px;
   border-radius: 5px;
   margin: 0;
@@ -102,7 +101,7 @@
   height: 81px;
   background: linear-gradient(
     270deg,
-    #f8f8f8 16.84%,
+    var(--theme-bg-secondary) 16.84%,
     rgba(248, 248, 248, 0.0001) 100%
   );
   pointer-events: none;
@@ -111,7 +110,7 @@
 .main__catalog__button {
   width: 240px;
   height: 72px;
-  background-color: #ffffff;
+  background-color: var(--theme-bg-base);
   border: 1px solid #eaeaea;
   border-radius: 5px;
 }
@@ -232,7 +231,7 @@
   width: 260px;
   height: 200px;
   padding: 16px;
-  background-color: #ffffff;
+  background-color: var(--theme-bg-base);
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -298,7 +297,7 @@
   grid-template-columns: 2fr 1fr 1fr 1fr;
   padding: 16px;
   box-sizing: border-box;
-  background-color: #f8f8f8;
+  background-color: var(--theme-bg-secondary);
   font-family: "TT Lakes";
   font-weight: 500;
   font-size: 14px;
@@ -315,7 +314,7 @@
   grid-template-columns: 2fr 1fr 1fr 1fr;
   padding: 16px;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: var(--theme-bg-base);
   position: relative;
   font-family: "Lakes";
   color: #1b1c21;

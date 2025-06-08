@@ -279,12 +279,12 @@ height: 152px;
 }
 
  .services__menu-item:first-child {
-    border: 2px solid #B8FFEC; 
+    border: 2px solid var(--accent-color-primary); 
     background-color: var(--theme-bg-base);
 } 
 
 .services__menu-item:nth-child(2) {
-    border: 2px solid #B8FFEC; 
+    border: 2px solid var(--accent-color-primary); 
     background-color: var(--theme-bg-base);
 } 
 
