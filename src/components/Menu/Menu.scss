@@ -1,3 +1,4 @@
+/** @format */
 
 .menu {
   position: fixed;
@@ -6,7 +7,7 @@
   width: 320px;
   height: 100vh;
   background-color: #ffffff;
-  z-index: 999;
+  z-index: 996;
   overflow-y: auto;
   transition: left 0.3s ease-in-out;
   box-shadow: 16px 0px 52px 0px #0e185033; // Затемнение справа
@@ -14,30 +15,27 @@
   &.menu--open {
     left: 0;
   }
+}
 
+@media (min-width: 768px) {
+  .menu {
+    height: 100vh;
   }
+}
 
-  @media (min-width: 768px) {
-    .menu {
-      height: 100vh;
-    }
-  }
-
-
-
-  @media (min-width: 1440px) {
-    .menu {
-    position: relative;
+@media (min-width: 1440px) {
+  .menu {
+    position: static;
     left: 0;
-    width: 320px;
+    min-width: 320px;
     height: 100vh;
     float: left;
     clear: both;
     box-shadow: none;
     transition: none;
-    }
-
+    overflow: hidden;
   }
+}
 
 .menu__nav {
   height: 70px;
@@ -63,16 +61,20 @@
   .menu__main {
     justify-content: space-between;
     width: 222px;
-    height: 100vh;
+    height: 837px;
     gap: 0px;
   }
 }
 
-  @media (min-width: 1440px) {
-      .menu__main {
+@media (min-width: 1440px) {
+  .menu__main {
     height: 837px;
   }
+
+  .menu__nav {
+    height: 130px;
   }
+}
 
 .menu__main__nav {
   display: flex;
@@ -97,6 +99,32 @@
   color: #7e7e82;
   padding-left: 0px;
   gap: 22px;
+}
+
+.menu__main__nav-button--second-highlight img {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .menu__main__nav-button:first-child {
+    color: var(--text-color-primary);
+    padding-left: 24px;
+    gap: 0;
+  }
+
+  .menu__main__nav-button:first-child img {
+    display: none;
+  }
+
+  .menu__main__nav-button--second-highlight {
+    padding-left: 0px;
+    gap: 22px;
+    color: #7e7e82;
+  }
+
+  .menu__main__nav-button--second-highlight img {
+    display: block;
+  }
 }
 
 .menu__main__nav-button,
@@ -171,7 +199,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.96);
-  z-index: 997;
+  z-index: 995;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -180,4 +208,14 @@
 .menu-overlay.menu-overlay--visible {
   opacity: 1;
   visibility: visible;
+}
+
+.menu__close-button {
+  display: block;
+}
+
+@media (min-width: 1440px) {
+  .menu__close-button {
+    display: none;
+  }
 }

@@ -9,6 +9,11 @@
   background-color: var(--theme-bg-base);
 }
 
+.app {
+    width: auto;
+  height: auto;
+}
+
 
 @media (min-width: 1121px) {
     html, body {
@@ -33,7 +38,13 @@ ol, p, form, label  {
 }
 
 button {
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
+}
+
+button:hover{
+    filter: brightness(1.2);
+  transform: scale(1.05);
 }
 
 #root {
@@ -43,4 +54,27 @@ button {
   @media (min-width: 1440px) {
     flex-direction: row;
   }
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }

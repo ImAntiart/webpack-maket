@@ -53,17 +53,29 @@ export default function Feedback() {
 
   `;
 
-  // Закрытие по клику на крестик
+  // Создаём overlay
+  const overlay = document.createElement('div');
+  overlay.classList.add('feedback-overlay'); // отдельный класс для feedback
+  document.body.appendChild(overlay);
+
+  // Открываем overlay только на десктопе
+  const mediaQuery = window.matchMedia('(min-width: 1440px)');
+  if (mediaQuery.matches) {
+    overlay.classList.add('feedback-overlay--visible');
+  }
+
+  // Закрытие по крестику
   const closeBtn = feedbackPopup.querySelector('.feedback-popup__close');
-  closeBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
+  closeBtn.addEventListener('click', () => {
     feedbackPopup.remove();
+    overlay.remove();
   });
 
-  // Закрытие по клику вне области
+  // Закрытие по клику вне popup'а
   feedbackPopup.addEventListener('click', (e) => {
     if (e.target === feedbackPopup) {
       feedbackPopup.remove();
+      overlay.remove();
     }
   });
 

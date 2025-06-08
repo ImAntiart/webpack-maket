@@ -36,17 +36,29 @@ export default function Call() {
 
   `;
 
-  // Закрытие по клику на крестик
+  // Создаём overlay
+  const overlay = document.createElement('div');
+  overlay.classList.add('call-overlay');
+  document.body.appendChild(overlay);
+
+  // Показываем только на десктопе
+  const mediaQuery = window.matchMedia('(min-width: 1440px)');
+  if (mediaQuery.matches) {
+    overlay.classList.add('call-overlay--visible');
+  }
+
+  // Закрытие по крестику
   const closeBtn = callPopup.querySelector('.call-popup__close');
-  closeBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
+  closeBtn.addEventListener('click', () => {
     callPopup.remove();
+    overlay.remove();
   });
 
-  // Закрытие по клику вне области
+  // Закрытие по клику вне popup'а
   callPopup.addEventListener('click', (e) => {
     if (e.target === callPopup) {
       callPopup.remove();
+      overlay.remove();
     }
   });
 

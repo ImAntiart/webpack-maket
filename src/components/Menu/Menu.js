@@ -7,7 +7,7 @@ import highlight from "../../assets/images/highlight.png";
 import callIcon from "../../assets/images/call.png";
 import chatIcon from "../../assets/images/chat.png";
 import profileIcon from "../../assets/images/profile.png";
-import searchIcon from "../../assets/images/search.png";
+import searchIconSecond from "../../assets/images/searchSecond.png";
 import "./Menu.scss";
 
 export default function Menu() {
@@ -25,7 +25,7 @@ export default function Menu() {
             </button>
         </nav>
         <nav class="header__nav">
-            <img src="${searchIcon}" alt="" />
+            <img src="${searchIconSecond}" alt="" />
       </nav>
     </section>
 
@@ -35,7 +35,10 @@ export default function Menu() {
           <img src="${highlight}" alt="" />
           Ремонт техники
         </button>
-        <button class="menu__main__nav-button">Услуги и сервисы</button>
+        <button class="menu__main__nav-button menu__main__nav-button--second-highlight">
+        <img src="${highlight}" alt="" />
+        Услуги и сервисы
+        </button>
         <button class="menu__main__nav-button">Корпоративным клиентам</button>
         <button class="menu__main__nav-button">Продавцам техники</button>
         <button class="menu__main__nav-button">Партнерам</button>
@@ -98,7 +101,7 @@ const callBtn = menu.querySelector('[aria-label="Позвонить"]');
 const feedbackBtn = menu.querySelector('[aria-label="Написать"]');
 
 callBtn.addEventListener('click', (e) => {
-  e.stopPropagation(); // чтобы не закрывалось меню или overlay
+  e.stopPropagation(); 
   document.body.appendChild(Call());
 });
 
