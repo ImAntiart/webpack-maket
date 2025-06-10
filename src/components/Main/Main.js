@@ -433,7 +433,7 @@ export default function Main() {
           type: "bullets",
           clickable: true,
         },
-/*         breakpoints: {
+        breakpoints: {
           320: {
             slidesPerView: 1.2,
           },
@@ -443,7 +443,7 @@ export default function Main() {
           640: {
             slidesPerView: 3.2,
           },
-        }, */
+        },
       });
     } else if (!isMobile && brandsSwiper) {
       brandsSwiper.destroy(true, true);
@@ -486,14 +486,25 @@ export default function Main() {
       priceSwiper = new Swiper(priceSliderEl, {
         modules: [Pagination],
         slidesPerView: "auto",
-        /*         slidesOffsetBefore: 16,
-        slidesOffsetAfter: 16, */
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16,
         centeredSlides: false,
         spaceBetween: 16,
         pagination: {
           el: ".swiper-pagination",
           type: "bullets",
           clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1.2,
+          },
+          480: {
+            slidesPerView: 2.2,
+          },
+          640: {
+            slidesPerView: 3.2,
+          },
         },
       });
     } else if (!isMobile && priceSwiper) {
