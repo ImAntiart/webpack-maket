@@ -119,51 +119,37 @@ export default function Header() {
             </div>
           </div>
 
-          <div class="about-company__read-more">
+          <div class="about-company__read-more" id="readMoreBtn">
             <img src="${expand}" alt="" />
             <button class="about-company__read-more-text">Читать далее</button>
           </div>
           
         </article>
 
-        <figure class="about-company__image">
-          <img
-            src="${compLow}"
-            alt="Фотография офиса нашей компании"
-          />
-        </figure>
+        <img src="${compLow}" alt="Фотография офиса нашей компании" class="about-company__image"/>
       </section>
     </div>
   `;
 
-  // Создаём и добавляем меню в DOM
-/*   const menu = Menu();
-  document.body.appendChild(menu);
 
-    // Создаём overlay
-  const overlay = document.createElement('div');
-  overlay.classList.add('menu-overlay');
-  document.body.appendChild(overlay);
+ // Добавляем элемент в DOM
+  document.body.appendChild(header);
 
-  // Находим кнопку бургера
-  const burgerButton = header.querySelector('.header__button[aria-label="Меню"]');
+  // Теперь элемент доступен в DOM
+  const readMoreBtn = document.getElementById('readMoreBtn');
+  if (readMoreBtn) {
+    readMoreBtn.addEventListener('click', function () {
+      const isHidden = document.querySelector('.about-company__text--secondary').style.display !== 'inline';
 
-    // Обработчик открытия/закрытия
-  burgerButton.addEventListener('click', () => {
-    menu.classList.toggle('menu--open');
-    overlay.classList.toggle('menu-overlay--visible');
-  });
+      document.querySelector('.about-company__text--secondary').style.display = isHidden ? 'inline' : 'none';
+      document.querySelector('.about-company__text--third').style.display = isHidden ? 'inline' : 'none';
 
-    // Закрытие по клику вне меню
-  overlay.addEventListener('click', () => {
-    menu.classList.remove('menu--open');
-    overlay.classList.remove('menu-overlay--visible');
-  }); */
-
-  // Вешаем обработчик открытия/закрытия
-/*   burgerButton.addEventListener('click', () => {
-    menu.classList.toggle('menu--open');
-  }); */
+      const buttonText = readMoreBtn.querySelector('.about-company__read-more-text');
+      if (buttonText) {
+        buttonText.textContent = isHidden ? 'Скрыть текст' : 'Читать далее';
+      }
+    });
+  }
 
   return header;
 }
