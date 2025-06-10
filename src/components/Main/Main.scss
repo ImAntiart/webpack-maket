@@ -43,13 +43,45 @@
 }
 
 .main__catalog-slider {
-  position: relative;
-  padding: 16px;
+/*   position: relative; */
+  padding: 16px 0 16px 16px;
   overflow: hidden;
 }
 
-.swiper {
+
+/* .swiper {
   position: relative;
+} */
+
+.position__scroll-fade--first,
+.position__scroll-fade--second,
+.position__scroll-fade--third {
+  position: relative;
+}
+
+.services__scroll-fade,
+.services__scroll-fade--second,
+.services__scroll-fade--third {
+  position: absolute;
+  top: 88px;
+  right: 0;
+  width: 24px;
+  height: 81px;
+  background: linear-gradient(
+    270deg,
+    var(--theme-bg-secondary) 16.84%,
+    rgba(248, 248, 248, 0.0001) 100%
+  );
+  pointer-events: none;
+  z-index: 900;
+}
+
+.services__scroll-fade--second {
+  height: 170px;
+}
+
+.services__scroll-fade--third {
+  height: 220px;
 }
 
 
@@ -69,7 +101,9 @@
     display: none;
   }
 
-  .services__scroll-fade {
+.services__scroll-fade,
+.services__scroll-fade--second,
+.services__scroll-fade--third {
     display: none;
   }
 }
@@ -93,19 +127,7 @@
   margin: 0;
 }
 
-.services__scroll-fade {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 24px;
-  height: 81px;
-  background: linear-gradient(
-    270deg,
-    var(--theme-bg-secondary) 16.84%,
-    rgba(248, 248, 248, 0.0001) 100%
-  );
-  pointer-events: none;
-}
+
 
 .main__catalog__button {
   width: 240px;

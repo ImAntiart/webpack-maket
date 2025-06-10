@@ -23,8 +23,9 @@ export default function Main() {
   const main = document.createElement("main");
   main.className = "main";
   main.innerHTML = `
-    <div class="main__header">
+    <div class="main__header position__scroll-fade--first">
       <h1 class="main__header-h1">Ремонт техники различных брендов</h1>
+      <div class="services__scroll-fade"></div>
     </div>
 
     <nav id="brandsSlider" class="main__catalog-slider swiper">
@@ -85,7 +86,7 @@ export default function Main() {
         </button>
 
 
-        <div class="services__scroll-fade"></div>
+        
       </div>
 
       <div class="swiper-pagination"></div>
@@ -98,8 +99,9 @@ export default function Main() {
       </button>
     </div>
 
-    <div class="main__header">
+    <div class="main__header position__scroll-fade--second">
       <h1 class="main__header-h1">Ремонт различных видов техники</h1>
+      <div class="services__scroll-fade--second"></div>
     </div>
     
 <nav id="repairSlider" class="main__catalog-slider swiper">
@@ -162,8 +164,9 @@ export default function Main() {
       </button>
     </div>
 
-     <div class="main__header">
+     <div class="main__header position__scroll-fade--third">
       <h1 class="main__header-h1">Цены на услуги</h1>
+      <div class="services__scroll-fade--third"></div>
     </div>
 
 <nav id="priceSliderMobile" class="main__catalog-slider swiper">
