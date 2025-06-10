@@ -433,7 +433,7 @@ export default function Main() {
           type: "bullets",
           clickable: true,
         },
-        breakpoints: {
+/*         breakpoints: {
           320: {
             slidesPerView: 1.2,
           },
@@ -443,7 +443,7 @@ export default function Main() {
           640: {
             slidesPerView: 3.2,
           },
-        },
+        }, */
       });
     } else if (!isMobile && brandsSwiper) {
       brandsSwiper.destroy(true, true);
