@@ -132,24 +132,77 @@ export default function Header() {
   `;
 
 
- // Добавляем элемент в DOM
-  document.body.appendChild(header);
+// Добавляем элемент в DOM
+document.body.appendChild(header);
 
-  // Теперь элемент доступен в DOM
-  const readMoreBtn = document.getElementById('readMoreBtn');
-  if (readMoreBtn) {
-    readMoreBtn.addEventListener('click', function () {
-      const isHidden = document.querySelector('.about-company__text--secondary').style.display !== 'inline';
+const readMoreBtn = document.getElementById('readMoreBtn');
+const secondaryText = document.querySelector('.about-company__text--secondary');
+const thirdText = document.querySelector('.about-company__text--third');
+const buttonTextEl = readMoreBtn?.querySelector('.about-company__read-more-text');
 
-      document.querySelector('.about-company__text--secondary').style.display = isHidden ? 'inline' : 'none';
-      document.querySelector('.about-company__text--third').style.display = isHidden ? 'inline' : 'none';
+function isMobile() {
+  return window.matchMedia('(max-width: 767px)').matches;
+}
 
-      const buttonText = readMoreBtn.querySelector('.about-company__read-more-text');
-      if (buttonText) {
-        buttonText.textContent = isHidden ? 'Скрыть текст' : 'Читать далее';
-      }
-    });
+// Функция для синхронизации отображения текста с текущим разрешением
+function updateTextVisibility() {
+  if (!secondaryText || !thirdText) return;
+
+  if (isMobile()) {
+    // На мобильных — скрываем всё, кроме основного текста
+    secondaryText.style.display = 'none';
+    thirdText.style.display = 'none';
+
+    // Сбрасываем inline, если были показаны ранее
+    secondaryText.style.opacity = '0';
+    thirdText.style.opacity = '0';
+  } else {
+    // На планшетах и десктопе — показываем вторую часть текста
+    secondaryText.style.display = 'inline';
+    secondaryText.style.opacity = '1';
+
+    if (window.matchMedia('(min-width: 1440px)').matches) {
+      thirdText.style.display = 'inline';
+      thirdText.style.opacity = '1';
+    }
   }
+}
+
+if (readMoreBtn && secondaryText && thirdText && buttonTextEl) {
+  // При клике просто переключаем видимость
+  readMoreBtn.addEventListener('click', function () {
+    const isHidden = secondaryText.style.display !== 'inline';
+
+    if (isHidden) {
+      // Показываем с анимацией
+      secondaryText.style.display = 'inline';
+      thirdText.style.display = 'inline';
+      requestAnimationFrame(() => {
+        secondaryText.style.opacity = '1';
+        thirdText.style.opacity = '1';
+      });
+    } else {
+      // Скрываем с анимацией
+      secondaryText.style.opacity = '0';
+      thirdText.style.opacity = '0';
+      setTimeout(() => {
+        secondaryText.style.display = 'none';
+        thirdText.style.display = 'none';
+      }, 300);
+    }
+
+    // Меняем текст кнопки
+    buttonTextEl.textContent = isHidden ? 'Скрыть текст' : 'Читать далее';
+  });
+
+  // Обновляем состояние при ресайзе
+  window.addEventListener('resize', () => {
+    updateTextVisibility();
+  });
+
+  // ❗️Важно: Вызываем один раз при загрузке, чтобы корректно отобразить текст
+  updateTextVisibility();
 
   return header;
+}
 }
