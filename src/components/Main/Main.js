@@ -350,10 +350,9 @@ export default function Main() {
   </p>
   <br>
   <div class="main__price-table-info--commercial">
-    <p>
-      Получить коммерческое предложение
-      <button> <img src="${arrow}" alt="Предложение" /> </button>
-    </p>
+    <button>
+      Получить коммерческое предложение<img src="${arrow}" alt="Предложение" /> 
+    </button>
   </div>
 </div>
 
