@@ -1038,13 +1038,13 @@ button.swiper-pagination-bullet {
   }
 }
 .main__catalog-slider {
-  /*   position: relative; */
-  padding: 16px 0 16px 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   overflow: hidden;
-  /*   width: 100%; */
 }
 
-/* .swiper {
+/* 
+.swiper {
   width: 100%;
 } */
 .position__scroll-fade--first,
@@ -1125,7 +1125,7 @@ button.swiper-pagination-bullet {
   transition: all 0.3s ease;
   /*   scroll-snap-align: start; */
   width: 240px;
-  flex-shrink: 0;
+  /*   flex-shrink: 0; */
 }
 
 .swiper-slide.collapsed {
