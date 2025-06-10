@@ -44,9 +44,7 @@
 
 .main__catalog-slider {
 /*   position: relative; */
-padding-top: 16px;
-padding-bottom: 16px;
-/*   padding: 16px 0 16px 0x; */
+  padding: 16px 0 16px 0x;
   overflow: hidden;
   width: 100%;
 
@@ -99,7 +97,6 @@ padding-bottom: 16px;
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    
   }
 
   .swiper-pagination {
@@ -125,7 +122,7 @@ padding-bottom: 16px;
   align-items: center;
   justify-content: space-around;
   width: 240px;
-/*   flex-shrink: 0; */
+  flex-shrink: 0;
   height: 72px;
   background-color: var(--theme-bg-base);
   border: #eaeaea solid 1px;
