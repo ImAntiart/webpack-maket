@@ -11,8 +11,7 @@ import logoBosch from "../../assets/images/brandsLogo/logoBosch.png";
 import logoHp from "../../assets/images/brandsLogo/logoHp.png";
 import logoSony from "../../assets/images/brandsLogo/logoSony.png";
 import deliver from "../../assets/images/deliver.png";
-import arrow from "../../assets/images/arrow.png"
-/* import decoy from "../../assets/images/decoy.png"; */
+import arrow from "../../assets/images/arrow.png";
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -84,8 +83,6 @@ export default function Main() {
           <img src="${logoSony}" alt="Логотип Sony" />
           <img src="${go}" alt="Выбор" />
         </button>
-
-
         
       </div>
 
@@ -287,7 +284,6 @@ export default function Main() {
   <div class="swiper-pagination"></div>
 </nav>
 
-
 <section class="main__price-table" id="priceSlider">
   <!-- Заголовки -->
   <div class="main__price-table-head">
@@ -358,9 +354,6 @@ export default function Main() {
     </button>
   </div>
 </div>
-
-
-
   `;
 
   // После того, как main будет добавлен в DOM, инициализируем Swiper и toggleSlides
@@ -431,14 +424,25 @@ export default function Main() {
       brandsSwiper = new Swiper(brandsSliderEl, {
         modules: [Pagination],
         slidesPerView: "auto",
-        /*         slidesOffsetBefore: 16,
-        slidesOffsetAfter: 16, */
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16,
         centeredSlides: false,
         spaceBetween: 16,
         pagination: {
           el: ".swiper-pagination",
           type: "bullets",
           clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1.2,
+          },
+          480: {
+            slidesPerView: 2.2,
+          },
+          640: {
+            slidesPerView: 3.2,
+          },
         },
       });
     } else if (!isMobile && brandsSwiper) {
@@ -455,11 +459,21 @@ export default function Main() {
         slidesOffsetAfter: 16,
         centeredSlides: false,
         spaceBetween: 16,
-
         pagination: {
           el: ".swiper-pagination",
           type: "bullets",
           clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1.2,
+          },
+          480: {
+            slidesPerView: 2.2,
+          },
+          640: {
+            slidesPerView: 3.2,
+          },
         },
       });
     } else if (!isMobile && repairSwiper) {
@@ -472,8 +486,8 @@ export default function Main() {
       priceSwiper = new Swiper(priceSliderEl, {
         modules: [Pagination],
         slidesPerView: "auto",
-        slidesOffsetBefore: 16,
-        slidesOffsetAfter: 16,
+        /*         slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16, */
         centeredSlides: false,
         spaceBetween: 16,
         pagination: {
