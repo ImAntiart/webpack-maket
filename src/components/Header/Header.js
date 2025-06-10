@@ -1,3 +1,5 @@
+/** @format */
+
 import "./Header.scss";
 
 import burgerIcon from "../../assets/images/burger.png";
@@ -83,9 +85,7 @@ export default function Header() {
         </header>
 
         <nav class="services__menu" aria-label="Категории услуг">
-          <button
-            class="services__menu-item services__menu-item--hide-on-small"
-          >
+          <button class="services__menu-item services__menu-item--hide-on-small">
             Ремонтируемые бренды
           </button>
           <button class="services__menu-item">Ремонтируемые устройства</button>
@@ -106,7 +106,7 @@ export default function Header() {
               Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
               официальной гарантией производителя.
             </div>
-            <br />
+            <br class="about-company__br--second">
 
             <div class="about-company__text--secondary">
               Мы успешно работаем с 1992 года и заслужили репутацию надежного
@@ -131,78 +131,84 @@ export default function Header() {
     </div>
   `;
 
+  // Добавляем элемент в DOM сразу после создания
+  document.body.appendChild(header);
 
-// Добавляем элемент в DOM
-document.body.appendChild(header);
+  // Теперь получаем элементы
+  const readMoreBtn = document.getElementById("readMoreBtn");
+  const secondaryText = document.querySelector(".about-company__text--secondary");
+  const thirdText = document.querySelector(".about-company__text--third");
+  const buttonTextEl = readMoreBtn?.querySelector(".about-company__read-more-text");
 
-const readMoreBtn = document.getElementById('readMoreBtn');
-const secondaryText = document.querySelector('.about-company__text--secondary');
-const thirdText = document.querySelector('.about-company__text--third');
-const buttonTextEl = readMoreBtn?.querySelector('.about-company__read-more-text');
+  // Функция для обновления видимости текста
+  function updateTextVisibility() {
+    if (!secondaryText || !thirdText) return;
 
-function isMobile() {
-  return window.matchMedia('(max-width: 767px)').matches;
-}
-
-// Функция для синхронизации отображения текста с текущим разрешением
-function updateTextVisibility() {
-  if (!secondaryText || !thirdText) return;
-
-  if (isMobile()) {
-    // На мобильных — скрываем всё, кроме основного текста
-    secondaryText.style.display = 'none';
-    thirdText.style.display = 'none';
-
-    // Сбрасываем inline, если были показаны ранее
-    secondaryText.style.opacity = '0';
-    thirdText.style.opacity = '0';
-  } else {
-    // На планшетах и десктопе — показываем вторую часть текста
-    secondaryText.style.display = 'inline';
-    secondaryText.style.opacity = '1';
-
-    if (window.matchMedia('(min-width: 1440px)').matches) {
-      thirdText.style.display = 'inline';
-      thirdText.style.opacity = '1';
+    if (window.matchMedia("(min-width: 1440px)").matches) {
+      secondaryText.style.display = "inline";
+      secondaryText.style.opacity = "1";
+      thirdText.style.display = "inline";
+      thirdText.style.opacity = "1";
+    } else if (!window.matchMedia("(max-width: 767px)").matches) {
+      secondaryText.style.display = "inline";
+      secondaryText.style.opacity = "1";
+      thirdText.style.display = "none";
+      thirdText.style.opacity = "0";
     }
   }
-}
 
-if (readMoreBtn && secondaryText && thirdText && buttonTextEl) {
-  // При клике просто переключаем видимость
-  readMoreBtn.addEventListener('click', function () {
-    const isHidden = secondaryText.style.display !== 'inline';
+  // Логика кнопки
+  if (readMoreBtn && secondaryText && thirdText && buttonTextEl) {
+    readMoreBtn.addEventListener("click", function () {
+      const isMobile = window.matchMedia("(max-width: 767px)").matches;
+      const isThirdVisible =
+        window.getComputedStyle(thirdText).display !== "none";
 
-    if (isHidden) {
-      // Показываем с анимацией
-      secondaryText.style.display = 'inline';
-      thirdText.style.display = 'inline';
-      requestAnimationFrame(() => {
-        secondaryText.style.opacity = '1';
-        thirdText.style.opacity = '1';
-      });
-    } else {
-      // Скрываем с анимацией
-      secondaryText.style.opacity = '0';
-      thirdText.style.opacity = '0';
-      setTimeout(() => {
-        secondaryText.style.display = 'none';
-        thirdText.style.display = 'none';
-      }, 300);
-    }
+      if (isMobile) {
+        const isHidden =
+          window.getComputedStyle(secondaryText).display === "none";
 
-    // Меняем текст кнопки
-    buttonTextEl.textContent = isHidden ? 'Скрыть текст' : 'Читать далее';
-  });
+        if (isHidden) {
+          secondaryText.style.display = "inline";
+          thirdText.style.display = "inline";
+          requestAnimationFrame(() => {
+            secondaryText.style.opacity = "1";
+            thirdText.style.opacity = "1";
+          });
+        } else {
+          secondaryText.style.opacity = "0";
+          thirdText.style.opacity = "0";
+          setTimeout(() => {
+            secondaryText.style.display = "none";
+            thirdText.style.display = "none";
+          }, 300);
+        }
 
-  // Обновляем состояние при ресайзе
-  window.addEventListener('resize', () => {
-    updateTextVisibility();
-  });
+        buttonTextEl.textContent = isHidden ? "Скрыть текст" : "Читать далее";
+      } else {
+        if (isThirdVisible) {
+          thirdText.style.opacity = "0";
+          setTimeout(() => {
+            thirdText.style.display = "none";
+          }, 300);
+          buttonTextEl.textContent = "Читать далее";
+        } else {
+          thirdText.style.display = "inline";
+          requestAnimationFrame(() => {
+            thirdText.style.opacity = "1";
+          });
+          buttonTextEl.textContent = "Скрыть текст";
+        }
+      }
+    });
 
-  // ❗️Важно: Вызываем один раз при загрузке, чтобы корректно отобразить текст
-  updateTextVisibility();
+    window.addEventListener("resize", () => {
+      updateTextVisibility();
+    });
 
-  return header;
-}
-}
+    updateTextVisibility(); 
+  }
+
+    return header;
+  }
+

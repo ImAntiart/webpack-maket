@@ -28,7 +28,8 @@
     right: 0;
     left: auto;
     height: 100vh;
-    box-shadow: -16px 0px 52px 0px #0e185033;
+    filter: drop-shadow(-16px 0px 52px #0e185033);
+    will-change: filter;
     border-left: 1px solid var(--accent-color-primary);
   }
 
@@ -59,7 +60,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: "TT Lakes black";
+    font-family: "TT Lakes";
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
