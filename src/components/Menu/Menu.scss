@@ -11,10 +11,11 @@
   overflow-y: auto;
   transition: left 0.3s ease-in-out;
   will-change: filter;
-  filter: drop-shadow(16px 0px 52px #0e185033);
+  
 
   &.menu--open {
     left: 0;
+    filter: drop-shadow(16px 0px 52px #0e185033);
   }
 }
 
@@ -35,7 +36,7 @@
     box-shadow: none;
     transition: none;
     overflow: hidden;
-    filter: drop-shadow(0px 0px 0px #0e185033);
+    /* filter: drop-shadow(0px 0px 0px #0e185033); */
   }
 }
 

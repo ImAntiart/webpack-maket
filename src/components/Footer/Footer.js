@@ -4,7 +4,10 @@ export default function Footer() {
   const footer = document.createElement("footer");
   footer.className = "footer";
 footer.innerHTML = `
-  <p class="footer__copyright">© 2019 CPS Разработано командой Apesong</p>
+ <div class="footer__copyright">
+    <p>© 2019 CPS</p>
+    <p>Разработано командой Apesong</p> 
+</div>
   <p class="footer__policy">Политика конфиденциальности</p>
   <p class="footer__offer">Информация, размещенная на данной странице, не является публичной офертой</p>
 `;
