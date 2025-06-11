@@ -29,6 +29,7 @@
   --text--color-accent: #FF3E79;
   --text--color-accent-hover: #b30000;
   --text--color-accent-active: #530000;
+  --text-color-secondary--opacity: rgba(126, 126, 130, 0.72)
   /* Границы */
   --border-color-default: #d9fff5;
   --border-color-secondary: #EAEAEA;
@@ -376,7 +377,7 @@ button:hover {
 .about-company {
   display: flex;
   flex-direction: column;
-  padding: 24px 0 24px 0;
+  padding-bottom: 24px;
   border-bottom: 1px solid var(--accent-color-primary);
 }
 
@@ -384,7 +385,7 @@ button:hover {
   .about-company {
     flex-direction: row;
     justify-content: space-between;
-    padding: 32px 0 32px 0;
+    padding-bottom: 32px;
   }
 }
 @media (min-width: 1440px) {
@@ -421,19 +422,19 @@ button:hover {
   line-height: 18px;
   letter-spacing: 0.2px;
   color: #1b1c21;
-  padding: 16px;
+  padding: 0 16px 16px 16px;
 }
 
 @media (min-width: 768px) {
   .about-company__info {
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    padding: 0 24px 24px 24px;
   }
 }
 @media (min-width: 1121px) {
   .about-company__info {
-    padding: 34px;
+    padding: 0 34px 34px 34px;
   }
 }
 .about-company__text--secondary,
@@ -488,7 +489,6 @@ button:hover {
   margin: 0;
   height: 176px;
   object-fit: cover;
-  border-radius: 5px;
   width: 100%;
 }
 
@@ -1380,11 +1380,12 @@ button.swiper-pagination-bullet {
   line-height: 16px;
   letter-spacing: 0px;
   text-align: center;
-  color: #7e7e82;
+  color: var(--text-color-secondary);
   gap: 16px;
   padding-top: 40px;
   padding-bottom: 20px;
   background-color: var(--theme-bg-secondary);
+  opacity: 0.5;
 }
 
 .footer__copyright {
@@ -1810,10 +1811,10 @@ button.swiper-pagination-bullet {
   overflow-y: auto;
   transition: left 0.3s ease-in-out;
   will-change: filter;
-  filter: drop-shadow(16px 0px 52px rgba(14, 24, 80, 0.2));
 }
 .menu.menu--open {
   left: 0;
+  filter: drop-shadow(16px 0px 52px rgba(14, 24, 80, 0.2));
 }
 
 @media (min-width: 768px) {
@@ -1832,7 +1833,7 @@ button.swiper-pagination-bullet {
     box-shadow: none;
     transition: none;
     overflow: hidden;
-    filter: drop-shadow(0px 0px 0px rgba(14, 24, 80, 0.2));
+    /* filter: drop-shadow(0px 0px 0px #0e185033); */
   }
 }
 .menu__nav {
